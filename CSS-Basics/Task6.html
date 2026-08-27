@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photo Gallery</title>
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #f1f5f9;
+
+            padding: 40px 20px;
+        }
+
+
+        h1 {
+            text-align: center;
+
+            color: #172554;
+
+            font-size: 2.8rem;
+
+            margin-bottom: 40px;
+        }
+
+
+        .gallery {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            /*
+                Automatically adjusts the number
+                of columns based on screen width.
+            */
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+
+        .gallery-item {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.15);
+
+            background-color: white;
+
+            cursor: pointer;
+        }
+
+
+        .gallery-item img {
+
+            width: 100%;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 15px;
+
+            transition:
+                transform 0.4s ease;
+        }
+
+
+        .caption {
+
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+
+            padding: 20px;
+
+            background-color:
+                rgba(0, 0, 0, 0.7);
+
+            color: white;
+
+            text-align: center;
+
+            font-size: 1.1rem;
+
+            /*
+                Initially hidden
+            */
+
+            opacity: 0;
+
+            transition:
+                opacity 0.4s ease;
+        }
+
+
+        .gallery-item:hover img {
+
+            transform: scale(1.1);
+        }
+
+
+        .gallery-item:hover .caption {
+
+            opacity: 1;
+        }
+
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <h1>My Photo Gallery</h1>
+
+
+    <div class="gallery">
+
+
+
+        <div class="gallery-item">
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+                alt="Mountain landscape"
+            >
+
+            <div class="caption">
+                Beautiful Mountains
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                alt="Beach"
+            >
+
+            <div class="caption">
+                Peaceful Beach
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+                alt="Forest"
+            >
+
+            <div class="caption">
+                Green Forest
+            </div>
+
+        </div>
+
+        <div class="gallery-item">
+
+            <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                alt="Lake and mountains"
+            >
+
+            <div class="caption">
+                Calm Lake
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img
+                src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e"
+                alt="Green valley"
+            >
+
+            <div class="caption">
+                Green Valley
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                alt="Road through mountains"
+            >
+
+            <div class="caption">
+                Mountain Road
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Business Website</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: #f1f5f9;
+
+            color: #1e293b;
+
+            line-height: 1.6;
+        }
+
+        header {
+
+            /*
+                STICKY POSITIONING
+                Header stays at the top while scrolling.
+            */
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            width: 100%;
+
+            padding: 18px 7%;
+
+            background-color: rgba(15, 23, 42, 0.95);
+
+            color: white;
+
+            border-bottom: 3px solid #38bdf8;
+
+            box-shadow:
+                0 3px 12px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .navbar {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 1.6rem;
+
+            font-weight: 800;
+
+            color: #38bdf8;
+        }
+
+
+        nav {
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 8px 12px;
+
+            border-radius: 5px;
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        nav a:hover {
+
+            background-color: #38bdf8;
+
+            color: #0f172a;
+        }
+
+
+        .hero {
+
+            /*
+                RELATIVE POSITIONING
+                Allows absolute elements inside hero.
+            */
+
+            position: relative;
+
+            height: 650px;
+
+            background-image:
+                linear-gradient(
+                    rgba(15, 23, 42, 0.65),
+                    rgba(30, 64, 175, 0.55)
+                ),
+                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+            overflow: hidden;
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 750px;
+
+            padding: 40px;
+        }
+
+
+        .hero-content h1 {
+
+            font-size: 4rem;
+
+            font-weight: 900;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+                2px 3px 8px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .hero-content p {
+
+            font-size: 1.3rem;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-btn {
+
+            display: inline-block;
+
+            padding: 14px 30px;
+
+            background-color: #38bdf8;
+
+            color: #0f172a;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 8px;
+
+            border: 2px solid white;
+
+            /*
+                OUTLINE PROPERTY
+            */
+
+            outline: 2px solid rgba(56, 189, 248, 0.5);
+
+            outline-offset: 4px;
+
+            transition: transform 0.3s ease;
+        }
+
+
+        .hero-btn:hover {
+
+            transform: scale(1.05);
+        }
+
+
+        .hero-badge {
+
+            /*
+                ABSOLUTE POSITIONING
+                Positioned relative to .hero.
+            */
+
+            position: absolute;
+
+            top: 25px;
+
+            right: 30px;
+
+            padding: 10px 18px;
+
+            background-color: rgba(56, 189, 248, 0.9);
+
+            color: #0f172a;
+
+            font-weight: bold;
+
+            border-radius: 20px;
+
+            border: 2px solid white;
+        }
+
+
+        section {
+
+            padding: 80px 8%;
+
+            margin: 0;
+
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .section-title h2 {
+
+            font-size: 2.6rem;
+
+            font-weight: 800;
+
+            color: #172554;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-title p {
+
+            color: #64748b;
+
+            font-size: 1.05rem;
+        }
+
+
+        #about {
+
+            background-color: white;
+        }
+
+
+        .about-container {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 50px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .about-text {
+
+            flex: 1;
+
+            padding: 25px;
+
+            /*
+                BORDER
+            */
+
+            border-left: 5px solid #38bdf8;
+        }
+
+
+        .about-text h3 {
+
+            font-size: 1.8rem;
+
+            margin-bottom: 15px;
+
+            color: #1e3a8a;
+        }
+
+
+        .about-text p {
+
+            margin-bottom: 15px;
+
+            color: #475569;
+        }
+
+
+        .about-image {
+
+            flex: 1;
+
+            padding: 10px;
+
+            border: 3px solid #cbd5e1;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 10px;
+        }
+
+
+        #services {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #e0f2fe
+                );
+        }
+
+
+        .services-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: flex;
+
+            gap: 25px;
+
+            align-items: stretch;
+        }
+
+
+        .service-box {
+
+            flex: 1;
+
+            background-color: white;
+
+            padding: 35px 25px;
+
+            /*
+                BORDER + BOX MODEL
+            */
+
+            border: 2px solid #bfdbfe;
+
+            border-radius: 12px;
+
+            margin: 5px;
+
+            box-shadow:
+                0 6px 18px rgba(0, 0, 0, 0.1);
+
+            text-align: center;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .service-box:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .service-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #38bdf8
+                );
+
+            color: white;
+
+            font-size: 1.8rem;
+        }
+
+
+        .service-box h3 {
+
+            font-size: 1.4rem;
+
+            margin-bottom: 12px;
+
+            color: #172554;
+        }
+
+
+        .service-box p {
+
+            color: #64748b;
+        }
+
+
+        #contact {
+
+            background-color: #f8fafc;
+        }
+
+
+        .contact-container {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            background-color: white;
+
+            border: 2px solid #cbd5e1;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+            color: #334155;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 13px 15px;
+
+            border: 2px solid #cbd5e1;
+
+            border-radius: 7px;
+
+            background-color: #f8fafc;
+
+            color: #1e293b;
+
+            font-size: 1rem;
+
+            outline: none;
+
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+
+        .form-group textarea {
+
+            height: 150px;
+
+            resize: vertical;
+        }
+
+
+        .submit-btn {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #1d4ed8,
+                    #2563eb
+                );
+
+            color: white;
+
+            font-size: 1rem;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        .floating-contact {
+
+            /*
+                FIXED POSITIONING
+                Always remains in the bottom-right corner.
+            */
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 55px;
+
+            height: 55px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border-radius: 50%;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 1.4rem;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.25);
+
+            z-index: 999;
+        }
+
+
+        footer {
+
+            background-color: #0f172a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+            border-top: 4px solid #38bdf8;
+        }
+
+
+        footer p {
+
+            color: #cbd5e1;
+        }
+
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            nav {
+
+                gap: 8px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .hero {
+
+                height: 550px;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 2.7rem;
+            }
+
+
+            .about-container {
+
+                flex-direction: column;
+            }
+
+
+            .about-text,
+            .about-image {
+
+                width: 100%;
+            }
+
+
+            .services-container {
+
+                flex-direction: column;
+            }
+
+
+            .service-box {
+
+                width: 100%;
+
+                margin: 0;
+            }
+
+
+            section {
+
+                padding: 60px 5%;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero-content h1 {
+
+                font-size: 2.2rem;
+            }
+
+
+            .hero-content p {
+
+                font-size: 1rem;
+            }
+
+
+            .hero-badge {
+
+                top: 15px;
+
+                right: 15px;
+            }
+
+
+            .section-title h2 {
+
+                font-size: 2rem;
+            }
+
+
+            .contact-container {
+
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                TechVision
+            </div>
+
+            <nav>
+
+                <a href="#home">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="hero" id="home">
+
+        <!-- Absolutely positioned badge -->
+
+        <div class="hero-badge">
+            Welcome
+        </div>
+
+
+        <div class="hero-content">
+
+            <h1>
+                Build Something Amazing
+            </h1>
+
+            <p>
+                We create modern digital experiences that help
+                businesses grow, connect, and succeed.
+            </p>
+
+            <a href="#services" class="hero-btn">
+                Explore Services
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>About Us</h2>
+
+            <p>
+                Learn more about what we do.
+            </p>
+
+        </div>
+
+
+        <div class="about-container">
+
+
+            <div class="about-text">
+
+                <h3>
+                    Innovation Meets Creativity
+                </h3>
+
+                <p>
+                    We are a creative technology team focused on
+                    designing modern and user-friendly digital
+                    solutions.
+                </p>
+
+                <p>
+                    Our goal is to combine creativity, technology,
+                    and thoughtful design to create meaningful
+                    experiences for users.
+                </p>
+
+            </div>
+
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36"
+                    alt="Team working together"
+                >
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section id="services">
+
+        <div class="section-title">
+
+            <h2>Our Services</h2>
+
+            <p>
+                Solutions designed for modern businesses.
+            </p>
+
+        </div>
+
+
+        <div class="services-container">
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Responsive and modern websites built with
+                    clean and efficient code.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    UI/UX Design
+                </h3>
+
+                <p>
+                    Beautiful and intuitive interfaces designed
+                    to provide excellent user experiences.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Digital Solutions
+                </h3>
+
+                <p>
+                    Scalable technology solutions that help
+                    organizations achieve their goals.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Have a question? Send us a message.
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+            <form>
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Send Message
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 TechVision. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <a
+        href="#contact"
+        class="floating-contact"
+        title="Contact Us"
+    >
+        ✉
+    </a>
+
+
+</body>
+
+</html>

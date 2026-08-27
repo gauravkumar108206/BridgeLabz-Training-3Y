@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pricing Plans</title>
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #f1f5f9;
+
+            color: #1e293b;
+
+            min-height: 100vh;
+
+            padding: 50px 20px;
+        }
+
+
+        .pricing-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+
+        .pricing-container h1 {
+
+            font-size: 2.8rem;
+
+            color: #172554;
+
+            margin-bottom: 10px;
+        }
+
+        .pricing-container > p {
+
+            color: #64748b;
+
+            margin-bottom: 40px;
+
+            font-size: 1.1rem;
+        }
+
+
+        .pricing-table {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: stretch;
+
+            gap: 25px;
+        }
+
+
+        .plan {
+
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            background-color: white;
+
+            border: 2px solid #cbd5e1;
+
+            border-radius: 15px;
+
+            padding: 35px 25px;
+
+            min-height: 500px;
+
+            /* Smooth transition */
+
+            transition:
+                transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .plan:hover {
+
+            transform: scale(1.05);
+
+            background-color: #eff6ff;
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .plan h2 {
+
+            font-size: 1.8rem;
+
+            color: #172554;
+
+            margin-bottom: 20px;
+        }
+
+
+        .price {
+
+            font-size: 2.5rem;
+
+            font-weight: bold;
+
+            color: #2563eb;
+
+            margin-bottom: 25px;
+        }
+
+        .price span {
+
+            font-size: 1rem;
+
+            font-weight: normal;
+
+            color: #64748b;
+        }
+
+        .features {
+
+            list-style: none;
+
+            text-align: left;
+
+            margin-bottom: 30px;
+
+            flex-grow: 1;
+        }
+
+
+        .features li {
+
+            padding: 10px 0;
+
+            border-bottom: 1px solid #e2e8f0;
+
+            color: #475569;
+        }
+
+
+        .features li::before {
+
+            content: "✓";
+
+            color: #16a34a;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+        }
+
+
+        .btn {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.2s ease;
+        }
+
+
+        .btn:hover {
+
+            background-color: #1d4ed8;
+
+            transform: translateY(-2px);
+        }
+
+
+        .popular {
+
+            border: 3px solid #f59e0b;
+
+            background-color: #fffbeb;
+
+            position: relative;
+
+            transform: scale(1.03);
+        }
+
+
+        /* Popular label */
+
+        .popular::before {
+
+            content: "MOST POPULAR";
+
+            position: absolute;
+
+            top: -15px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background-color: #f59e0b;
+
+            color: white;
+
+            padding: 6px 18px;
+
+            border-radius: 20px;
+
+            font-size: 0.75rem;
+
+            font-weight: bold;
+        }
+
+
+        .popular h2 {
+
+            color: #b45309;
+        }
+
+
+        .popular .price {
+
+            color: #d97706;
+        }
+
+
+        @media (max-width: 700px) {
+
+            .pricing-table {
+
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .plan {
+
+                width: 100%;
+
+                min-height: 450px;
+            }
+
+            .popular {
+
+                transform: none;
+            }
+
+            .pricing-container h1 {
+
+                font-size: 2.2rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="pricing-container">
+
+>
+
+        <h1>Choose Your Plan</h1>
+
+        <p>
+            Select the plan that best fits your needs.
+        </p>
+
+
+        <div class="pricing-table">
+
+            <div class="plan">
+
+                <h2>Basic</h2>
+
+                <div class="price">
+                    ₹199
+                    <span>/month</span>
+                </div>
+
+
+                <ul class="features">
+
+                    <li>5 Projects</li>
+
+                    <li>10 GB Storage</li>
+
+                    <li>Email Support</li>
+
+                    <li>Basic Analytics</li>
+
+                    <li>Community Access</li>
+
+                </ul>
+
+
+                <a href="#" class="btn">
+                    Get Started
+                </a>
+
+            </div>
+
+
+            <div class="plan popular">
+
+                <h2>Standard</h2>
+
+                <div class="price">
+                    ₹499
+                    <span>/month</span>
+                </div>
+
+
+                <ul class="features">
+
+                    <li>20 Projects</li>
+
+                    <li>50 GB Storage</li>
+
+                    <li>Priority Support</li>
+
+                    <li>Advanced Analytics</li>
+
+                    <li>Team Collaboration</li>
+
+                    <li>Custom Reports</li>
+
+                </ul>
+
+
+                <a href="#" class="btn">
+                    Choose Standard
+                </a>
+
+            </div>
+
+
+            <div class="plan">
+
+                <h2>Premium</h2>
+
+                <div class="price">
+                    ₹999
+                    <span>/month</span>
+                </div>
+
+
+                <ul class="features">
+
+                    <li>Unlimited Projects</li>
+
+                    <li>200 GB Storage</li>
+
+                    <li>24/7 Premium Support</li>
+
+                    <li>Advanced Analytics</li>
+
+                    <li>Team Collaboration</li>
+
+                    <li>Custom Reports</li>
+
+                    <li>API Access</li>
+
+                </ul>
+
+
+                <a href="#" class="btn">
+                    Go Premium
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

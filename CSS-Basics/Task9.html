@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Chronicle - Magazine Layout</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+
+            background-color: #dbe4ea;
+
+            color: #222;
+
+            padding: 30px;
+        }
+
+
+        .newspaper {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            background-color: #fffef8;
+
+            padding: 40px 50px;
+
+            border: 1px solid #cbd5e1;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .top-header {
+
+            text-align: center;
+
+            border-bottom: 3px solid #222;
+
+            padding-bottom: 15px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .top-header h1 {
+
+            font-family: "Times New Roman", serif;
+
+            font-size: 3.5rem;
+
+            font-weight: 900;
+
+            letter-spacing: 3px;
+        }
+
+
+        .top-header p {
+
+            font-family: Arial, sans-serif;
+
+            font-size: 0.9rem;
+
+            color: #555;
+
+            margin-top: 5px;
+        }
+
+
+        .article {
+
+            /*
+                Creates three vertical columns
+            */
+
+            column-count: 3;
+
+            column-gap: 40px;
+
+            column-rule: 1px solid #ccc;
+
+            text-align: justify;
+
+            font-size: 1rem;
+
+            line-height: 1.7;
+        }
+
+        .article h2 {
+
+            /*
+                Heading spans all three columns
+            */
+
+            column-span: all;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 2.4rem;
+
+            font-weight: 800;
+
+            color: #172554;
+
+            margin-bottom: 25px;
+
+            padding-bottom: 12px;
+
+            border-bottom: 2px solid #172554;
+        }
+
+
+        .article h3 {
+
+            font-family: Arial, sans-serif;
+
+            font-size: 1.3rem;
+
+            font-weight: 700;
+
+            margin: 20px 0 10px;
+
+            color: #1e3a8a;
+
+            /*
+                Avoid breaking heading from content
+            */
+
+            break-after: avoid;
+        }
+
+
+        .article p {
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+        }
+
+
+
+        .article img {
+
+            /*
+                Image aligned to the left
+                using float
+            */
+
+            float: left;
+
+            width: 220px;
+
+            height: 150px;
+
+            object-fit: cover;
+
+            margin: 5px 18px 10px 0;
+
+            border: 3px solid #333;
+
+            border-radius: 5px;
+        }
+
+
+        .article p:first-of-type::first-letter {
+
+            font-size: 3.5rem;
+
+            font-weight: bold;
+
+            float: left;
+
+            line-height: 0.8;
+
+            margin-right: 8px;
+
+            color: #b91c1c;
+        }
+
+
+        mark {
+
+            background-color: #fde68a;
+
+            padding: 2px 4px;
+        }
+
+
+
+        blockquote {
+
+            border-left: 5px solid #b91c1c;
+
+            background-color: #fef2f2;
+
+            padding: 15px 20px;
+
+            margin: 20px 0;
+
+            font-style: italic;
+
+            font-size: 1.05rem;
+        }
+
+
+        footer {
+
+            clear: both;
+
+            border-top: 3px solid #222;
+
+            margin-top: 30px;
+
+            padding-top: 15px;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 0.85rem;
+
+            color: #555;
+        }
+
+
+       
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="newspaper">
+
+
+        <header class="top-header">
+
+            <h1>THE DAILY CHRONICLE</h1>
+
+            <p>
+                NEWS • CULTURE • TECHNOLOGY • SOCIETY
+            </p>
+
+        </header>
+
+
+        <main class="article">
+
+
+            <!-- Heading spanning all columns -->
+
+            <h2>
+                How Technology Is Changing Modern Life
+            </h2>
+
+
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                alt="Technology and computer components"
+            >
+
+
+            <p>
+                Technology has become an important part of everyday life,
+                changing how people communicate, work, study, and
+                entertain themselves. From smartphones to artificial
+                intelligence, modern tools have made information more
+                accessible than ever before.
+            </p>
+
+
+            <p>
+                The rapid growth of the internet has connected people
+                across the world. Social media, video conferencing, and
+                instant messaging allow individuals to communicate
+                regardless of geographical distance. This
+                <mark>digital connectivity</mark> has also transformed
+                the way businesses operate.
+            </p>
+
+
+            <h3>Technology in Education</h3>
+
+
+            <p>
+                Education has experienced major changes because of
+                technology. Students can access online courses,
+                digital libraries, educational videos, and interactive
+                learning platforms. These resources provide opportunities
+                for students to learn at their own pace.
+            </p>
+
+
+            <blockquote>
+                "The technology we use today shapes the opportunities
+                we create for tomorrow."
+            </blockquote>
+
+
+            <h3>The Rise of Artificial Intelligence</h3>
+
+
+            <p>
+                Artificial intelligence is one of the most rapidly
+                developing areas of modern technology. AI systems can
+                process large amounts of information, identify patterns,
+                and assist humans with a wide variety of tasks.
+            </p>
+
+
+            <p>
+                Industries such as healthcare, finance, transportation,
+                and manufacturing are increasingly using intelligent
+                systems. While AI provides many benefits, it also raises
+                important questions about privacy, security, employment,
+                and responsible use.
+            </p>
+
+
+            <h3>Technology and Society</h3>
+
+
+            <p>
+                Modern society depends heavily on digital infrastructure.
+                People use technology for shopping, banking, navigation,
+                communication, entertainment, and many other daily
+                activities. As a result, digital literacy has become an
+                increasingly valuable skill.
+            </p>
+
+
+            <p>
+                However, technological progress also brings challenges.
+                Cybersecurity threats, misinformation, online privacy,
+                and excessive screen usage are issues that individuals
+                and organizations must carefully consider.
+            </p>
+
+
+            <h3>Looking Towards the Future</h3>
+
+
+            <p>
+                The future will likely bring even greater integration
+                between technology and everyday life. New developments
+                in artificial intelligence, robotics, renewable energy,
+                and computing may create opportunities that are difficult
+                to imagine today.
+            </p>
+
+
+            <p>
+                Ultimately, technology is a tool. Its impact depends on
+                how people choose to develop and use it. Responsible
+                innovation, education, and awareness will be essential
+                for creating a future where technology benefits society.
+            </p>
+
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                © 2026 The Daily Chronicle | Digital Magazine Edition
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+</body>
+
+</html>

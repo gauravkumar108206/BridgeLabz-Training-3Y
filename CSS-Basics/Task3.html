@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Members</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+
+            padding: 40px 20px;
+        }
+
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+
+            color: #172554;
+        }
+
+
+        .team-container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            width: 100%;
+        }
+
+
+        .card {
+
+            flex: 1;
+
+            background-color: white;
+
+            /* Box Model */
+            padding: 30px;
+            margin: 10px;
+
+            /* Border */
+            border: 2px solid #cbd5e1;
+
+            /* Rounded corners */
+            border-radius: 15px;
+
+            /* Shadow */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+        }
+
+
+        .profile {
+
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50%;
+
+            background-color: #dbeafe;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 2rem;
+            font-weight: bold;
+
+            color: #1d4ed8;
+
+            border: 3px solid #2563eb;
+        }
+
+
+        .card h2 {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 8px;
+
+            color: #172554;
+        }
+
+
+        .card h3 {
+
+            font-size: 1rem;
+
+            margin-bottom: 15px;
+
+            color: #2563eb;
+        }
+
+
+        .card p {
+
+            font-size: 0.95rem;
+
+            line-height: 1.6;
+
+            color: #475569;
+        }
+
+
+        .team-lead {
+
+            background-color: #fff7ed;
+
+            border: 3px dashed #ea580c;
+
+            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.25);
+        }
+
+
+        .team-lead .profile {
+
+            background-color: #fed7aa;
+
+            color: #c2410c;
+
+            border-color: #ea580c;
+        }
+
+
+        .team-lead h2 {
+
+            color: #9a3412;
+        }
+
+
+        .team-lead h3 {
+
+            color: #ea580c;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .team-container {
+
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+            .card {
+
+                width: 100%;
+
+                margin: 10px 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+        <h1>Our Team Members</h1>
+
+
+        <div class="team-container">
+
+
+            <!-- TEAM MEMBER 1 -->
+
+            <div class="card team-lead">
+
+                <div class="profile">
+                    GK
+                </div>
+
+                <h2>Gaurav Kumar</h2>
+
+                <h3>Team Lead</h3>
+
+                <p>
+                    Leads the team and coordinates project development.
+                    Responsible for planning, problem solving, and
+                    ensuring that the project is completed successfully.
+                </p>
+
+            </div>
+
+
+            <!-- TEAM MEMBER 2 -->
+
+            <div class="card">
+
+                <div class="profile">
+                    AS
+                </div>
+
+                <h2>Aman Sharma</h2>
+
+                <h3>Frontend Developer</h3>
+
+                <p>
+                    Designs and develops responsive user interfaces.
+                    Focuses on creating clean layouts and improving
+                    the overall user experience.
+                </p>
+
+            </div>
+
+
+            <!-- TEAM MEMBER 3 -->
+
+            <div class="card">
+
+                <div class="profile">
+                    RS
+                </div>
+
+                <h2>Rahul Singh</h2>
+
+                <h3>Backend Developer</h3>
+
+                <p>
+                    Works on server-side development, databases, and
+                    APIs. Ensures that the application works efficiently
+                    and securely.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

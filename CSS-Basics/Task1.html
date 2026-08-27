@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Kumar | Portfolio</title>
+
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Makes footer stay at bottom */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #1f2937;
+        }
+
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;              /* % unit */
+            height: 70px;             /* px unit */
+
+            background-color: #172554;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 5%;            /* % unit */
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8rem;        /* rem unit */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5em;       /* em unit */
+            font-size: 1rem;          /* rem unit */
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        /* Main section */
+        main {
+            flex: 1;
+
+            min-height: 100vh;        /* vh unit */
+            padding: 120px 8% 50px;   /* px + % units */
+
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
+        }
+
+        .hero {
+            width: 90%;
+            max-width: 1000px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .intro {
+            flex: 1;
+        }
+
+        .intro h2 {
+            font-size: 3rem;          /* rem unit */
+            margin-bottom: 20px;      /* px unit */
+            color: #172554;
+        }
+
+        .intro h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+
+            background-color: #172554;
+            color: white;
+
+            font-size: 0.9rem;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        <h1>Gaurav Kumar</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="intro" id="about">
+                <h2>Hello, I'm Gaurav</h2>
+
+                <h3>Computer Science Engineering Student</h3>
+
+                <p>
+                    I am a Computer Science Engineering student passionate about
+                    programming, web development, cybersecurity, and problem solving.
+                    I enjoy building projects, learning new technologies, and
+                    improving my skills in Data Structures and Algorithms.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 Gaurav Kumar | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
